@@ -1,10 +1,12 @@
 // packages
 const express = require("express");
+const cors = require("cors");
 
 // internal code
 const { getJobs } = require("./Services");
 
 const server = express();
+server.use(cors());
 
 const PORT = process.env.PORT ? process.env.PORT : 3000;
 
